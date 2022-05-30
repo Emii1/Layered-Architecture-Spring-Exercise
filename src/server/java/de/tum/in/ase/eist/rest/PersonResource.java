@@ -1,6 +1,6 @@
 package de.tum.in.ase.eist.rest;
 
-import de.tum.in.ase.eist.model.Note;
+
 import de.tum.in.ase.eist.model.Person;
 import de.tum.in.ase.eist.service.PersonService;
 import de.tum.in.ase.eist.util.PersonSortingOptions;

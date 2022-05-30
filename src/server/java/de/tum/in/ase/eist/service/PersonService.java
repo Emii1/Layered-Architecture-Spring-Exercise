@@ -3,9 +3,13 @@ package de.tum.in.ase.eist.service;
 import de.tum.in.ase.eist.model.Person;
 import de.tum.in.ase.eist.util.PersonSortingOptions;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.*;
-
+@RequestMapping
+@RestController
 @Service
 public class PersonService {
   	// do not change this
@@ -33,10 +37,11 @@ public class PersonService {
     public void deletePerson(UUID personId) {
         this.persons.removeIf(person -> person.getId().equals(personId));
     }
-
+    @GetMapping
     public List<Person> getAllPersons(PersonSortingOptions sortingOptions) {
         // TODO Part 3: Add sorting here
         return new ArrayList<>(this.persons);
+
     }
 
 
